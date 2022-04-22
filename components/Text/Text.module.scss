@@ -1,0 +1,55 @@
+@use "../../styles/" as *;
+
+.text {
+  line-height: $line-m;
+  @include weight(normal);
+  
+  @each $name in $weight-names {
+    &.weight_#{$name} {
+      @include weight($name);
+    }
+  }
+}
+
+// Create text size rules based on the map in _types.scss
+@each $size in $text-size-names {
+  .size_#{$size} {
+    @include text-size($size);
+  }
+}
+
+// Heading defaults
+h1.text,
+h2.text,
+h3.text,
+h4.text,
+h5.text,
+h6.text {
+  font-family: $family-sans-serif;
+  @include weight(semibold);
+  color: inherit;
+}
+
+h1.text {
+  @include text-size(xxl);
+  line-height: $line-xl;
+}
+
+h2.text {
+  @include text-size(xl);
+  line-height: $line-l;
+}
+
+h3.text {
+  @include text-size(l);
+}
+
+h4.text {
+  @include text-size(m);
+}
+
+h5.text,
+h6.text {
+  @include text-size(sm);
+}
+

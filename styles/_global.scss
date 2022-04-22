@@ -1,0 +1,26 @@
+@use "./utils/" as *;
+@use "./theme/" as *;
+
+html {
+  background-color: $gray-100;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  font-family: $family-sans-serif;
+  @include weight(light);
+  font-size: 1rem;
+  color: $gray-800;
+}
+
+a {
+  color: $primary-500;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-700;
+  }
+}

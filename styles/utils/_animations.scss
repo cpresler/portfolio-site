@@ -1,0 +1,84 @@
+//  Transitions
+$move-in: ease-out;
+$move: ease;
+$move-out: ease-in;
+
+// Durations
+$speed-slow: 800ms ;
+$speed-med: 600ms;
+$speed-fast: 300ms;
+$speed-faster: 200ms;
+$speed-fastest: 100ms;
+
+
+// Slides
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+// Fades
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .7;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+// Rotations

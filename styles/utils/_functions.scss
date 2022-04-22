@@ -1,0 +1,22 @@
+/// Convert a given px unit to a rem unit
+/// @param {Number} $px - Number with px unit
+/// @return {Number} Number with rem unit
+@function px-rem($px) {
+  @return ($px / 16px) * 1rem;
+}
+
+/// Slightly lighten a color
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

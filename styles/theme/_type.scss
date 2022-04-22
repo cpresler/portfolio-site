@@ -1,0 +1,50 @@
+@use "./color" as *;
+
+// Font Stacks
+$family-sans-serif: 'Lexend Deca', sans-serif;
+$render-mode: optimizeLegibility;
+
+// Font Weights
+$weight-names: (
+  'light',
+  'normal',
+  'medium',
+  'semibold',
+  'bold',
+);
+$weights: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+// Sizes
+$text-size-names: (
+  'xs',
+  'sm',
+  'm',
+  'l',
+  'xl',
+  'xxl'
+);
+$text-sizes: (
+  xs: 0.75rem,
+  sm: 1rem,
+  m: 1.25rem,
+  l: 1.5rem,
+  xl: 2rem,
+  xxl: 2.5rem,
+);
+
+// Line Heights
+$line-sm: 1;
+$line-m: 1.25;
+$line-l: 1.5;
+$line-xl: 2;
+
+// Text Color
+$text: $gray-800;
+$text-dimmed: $gray-600;
+

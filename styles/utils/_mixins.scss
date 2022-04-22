@@ -1,0 +1,47 @@
+@use "../theme/" as *;
+@use "sass:list";
+
+// Text
+
+@mixin text-size($size) {
+  @if map-has-key($text-sizes, $size) {
+    font-size: map-get($text-sizes, $size);
+  } @else {
+    @debug 'size: #{$size}';
+    @error 'text sizes can only be #{$text-size-names}';
+  }
+}
+
+@mixin weight($value) {
+  @if map-has-key($weights, $value) {
+    font-weight: map-get($weights, $value);
+  } @else {
+    @error 'weight #{$value} not found in: #{$weight-names}';
+  }
+}
+
+//  Media Queries
+
+@mixin tablet {
+  @media screen  and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-s {
+  @media screen and (min-width: $desktop-s) {
+    @content;
+  }
+}
+
+@mixin desktop-m {
+  @media screen and (min-width: $desktop-m) {
+    @content;
+  }
+}
+
+@mixin desktop-l {
+  @media screen and (min-width: $desktop-l) {
+    @content;
+  }
+}
