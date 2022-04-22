@@ -1,0 +1,61 @@
+@use '../../styles/' as *;
+
+.button {
+  @include text-size(sm);
+  @include weight(medium);
+  line-height: $line-m;
+  padding: $textFrameY $textFrameX;
+  border: none;
+  background-color: $buttonBg;
+  border-radius: $radius-m;
+  cursor: pointer;
+  color: $text;
+  letter-spacing: 0.03em;
+  transition: 0.2s all;
+  text-align: center;
+  
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+
+  // Primary
+  &.isPrimary {
+    background-color: $buttonPrimaryBg;
+    color: $buttonPrimaryText;
+  }
+
+  // GrayedOut
+  &.isGrayed {
+    color: $text-dimmed;
+
+    &:hover {
+      filter: unset;
+    }
+  }
+
+  // Size Variants
+  &.isSmall {
+    @include text-size(xs);
+    letter-spacing: 0;
+  }
+
+  &.isLarge {
+    @include text-size(m);
+    letter-spacing: 0.05;
+  }
+
+  &.isFullWidth {
+    width: 100%;
+  }
+
+  // Standalone Link Button
+  &.isStandalone {
+    background: transparent;
+    @include weight(bold);
+  }
+
+}

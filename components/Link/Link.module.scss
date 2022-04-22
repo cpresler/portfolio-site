@@ -1,0 +1,48 @@
+@use 'sass:math';
+@use '../../styles/' as *;
+
+.link {
+  color: $text;
+  text-decoration: none;
+  padding-bottom: $space-xxs;
+}
+
+.nav_link {
+  @include text-size(l);
+  @include weight(medium);
+  text-decoration: none;
+  color: $text;
+  padding-bottom: $space-xs;
+  padding-top: $space-xs;
+  background-image: linear-gradient(90deg, $primary-400, $primary-400);
+  background-size: 0% $space-xxs;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+
+  &:hover {
+    background-size: 100% $space-xxs;
+  }
+
+  &.active {
+    background-image: linear-gradient(90deg, $primary-500, $primary-500);
+    background-size: 100% $space-xxs;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+}
+
+.ext_link {
+  color: $text;
+  text-decoration: none;
+
+  .icon {
+    width: map-get($text-sizes , m);
+    height: map-get($text-sizes , m);
+    margin-right: $space-xs;
+  }
+
+  &:hover {
+    color: $text-dimmed;
+  }
+}
