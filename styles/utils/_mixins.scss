@@ -45,3 +45,17 @@
     @content;
   }
 }
+
+// Containers & Content
+
+@mixin container {
+  width: $container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin content {
+  width: $content;
+  max-width: $content-max;
+}

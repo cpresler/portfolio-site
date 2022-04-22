@@ -1,5 +1,5 @@
 // Reset Styles
-@forward "./destyle";
+// @forward "./destyle"; // move to generic .css and import globally for nextjs
 
 // Utilities
 @forward "./utils/";
@@ -8,4 +8,4 @@
 @forward "./theme/";
 
 // Global Styles
-@forward "./global";
+// @forward "./global"; // move to generic .css and import globally for nextjs

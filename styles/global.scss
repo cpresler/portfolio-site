@@ -1,5 +1,11 @@
-@use "./utils/" as *;
-@use "./theme/" as *;
+
+// Reset Styles
+@forward "_destyle";
+
+// Utilities & Theme
+@use "./index.scss" as *;
+
+// Global Level Styles
 
 html {
   background-color: $gray-100;

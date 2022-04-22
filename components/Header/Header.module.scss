@@ -1,0 +1,71 @@
+@use '../../styles/' as *;
+
+.container {
+  @include container;
+  padding: $space-m 0;
+}
+
+.logo {
+  width: grid-8pt(9); // 72px
+  height: grid-8pt(9); // 72px
+  padding: 0;
+
+  &:hover {
+    // do something fun here
+  }
+}
+
+.nav {
+  @include content;
+  display: flex;
+  justify-content: space-between;
+
+  &_links {
+    display: flex;
+    gap: $space-m;
+    align-items: center;
+
+
+    @include tablet {
+      gap: $space-l;
+    }
+
+    @include desktop-s {
+      gapb: $space-xl;
+    }
+  }
+
+  &_link {
+    @include text-size(m);
+    @include weight(light);
+    text-decoration: none;
+    color: $text;
+    padding-bottom: $space-xs;
+    padding-top: $space-xs;
+    background-image: linear-gradient(90deg, $primary-400, $primary-400);
+    background-size: 0% $space-xxs;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+
+    &:hover {
+      background-size: 100% $space-xxs;
+    }
+
+    &.active {
+      background-image: linear-gradient(90deg, $primary-500, $primary-500);
+      background-size: 100% $space-xxs;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+    &.light {
+      color: $text-light;
+      background-image: linear-gradient(90deg, $primary-200, $primary-200);
+      
+      &.active {
+        background-image: linear-gradient(90deg, $primary-300, $primary-300);
+      }
+    }
+  }
+}

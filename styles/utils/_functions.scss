@@ -20,3 +20,15 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+/// Size things to the grid
+/// @param {step} $step - number of blocks to include
+@function grid-8pt($step) {
+  @return (0.5rem * $step);
+}
+
+/// Size things to the grid
+/// @param {step} $step - number of blocks to include
+@function grid-4pt($step) {
+  @return (0.25rem * $step);
+}

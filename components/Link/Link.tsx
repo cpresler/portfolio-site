@@ -31,10 +31,12 @@ export function NavLink({
   exact = false,
   children,
   className,
+  light = false,
   ...rest
 }: React.PropsWithoutRef<any> & React.RefAttributes<HTMLAnchorElement>): JSX.Element {
   const classes = classNames(className, {
-    [styles.nav_link]: true
+    [styles.nav_link]: true,
+    [styles.light]: light,
   })
   const { pathname } = useRouter()
   const isActive = exact ? pathname === href: pathname.startsWith(href)
