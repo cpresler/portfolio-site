@@ -31,13 +31,12 @@
     }
 
     @include desktop-s {
-      gapb: $space-xl;
+      gap: $space-xl;
     }
   }
 
   &_link {
     @include text-size(m);
-    @include weight(light);
     text-decoration: none;
     color: $text;
     padding-bottom: $space-xs;

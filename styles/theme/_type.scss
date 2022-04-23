@@ -35,17 +35,34 @@ $text-sizes: (
   m: 1.25rem,
   l: 1.5rem,
   xl: 2rem,
-  xxl: 2.5rem,
+  xxl: 3rem,
 );
 
 // Line Heights
-$line-sm: 1;
-$line-m: 1.25;
-$line-l: 1.5;
-$line-xl: 2;
+$line-size-names: (
+  'xs',
+  'sm',
+  'm',
+  'l',
+  'xl',
+  'xxl'
+);
+$line-sizes: (
+  xs: 1,
+  sm: 1,
+  m: 1.25,
+  l: 1.5,
+  xl: 1.6,
+  xxl: 1.7,
+);
+// $line-sm: 1;
+// $line-m: 1.25;
+// $line-l: 1.5;
+// $line-xl: 2;
 
 // Text Color
 $text: $gray-800;
 $text-dimmed: $gray-600;
+$text-muted: $gray-400;
 $text-light: $gray-100;
 

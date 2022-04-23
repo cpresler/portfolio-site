@@ -23,7 +23,7 @@ const Header = ({ className, dark = false }: Props) => {
     <div className={classes}>
       <nav className={styles.nav}>
         <NavLink href={'/'} className={styles.logo}>
-          <Image src={dark ? '/images/christy-presler-logo-light.svg' : '/images/christy-presler-logo-dark.svg'} width="72" height="72"/>
+          <Image src={dark ? '/images/christy-presler-logo-light.svg' : '/images/christy-presler-logo-dark.svg'} width="72" height="72" alt="Christy Presler Logo"/>
         </NavLink>
 
         <ul className={styles.nav_links}>

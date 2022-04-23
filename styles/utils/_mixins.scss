@@ -12,6 +12,15 @@
   }
 }
 
+@mixin line($size) {
+  @if map-has-key($line-sizes, $size) {
+    line-height: map-get($line-sizes, $size);
+  } @else {
+    @debug 'size: #{$size}';
+    @error 'text sizes can only be #{$line-size-names}';
+  }
+}
+
 @mixin weight($value) {
   @if map-has-key($weights, $value) {
     font-weight: map-get($weights, $value);

@@ -3,3 +3,95 @@
 .home {
   background-color: $gray-700;
 }
+
+.main {
+  // min-height: 50vh;
+
+  & > section {
+    @include container;
+    padding: $space-l 0 $space-xl;
+
+    @include tablet {
+      padding: (2 * $space-xl) 0;
+    }
+  }
+}
+
+.hero {
+  // @include container;
+  background-color: $gray-700;
+  position: relative;
+
+  &:after {
+    content: '';
+    background-color: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    height: grid-8pt(16);
+    transform: skewY(2deg);
+    transform-origin: 0%;
+    z-index: $z-index-neg;
+  }
+
+  &_content {
+    @include content;
+    display: grid;
+    gap: $space-m;
+    align-items: center;
+    
+    @include desktop-s {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: unset;
+      gap: $space-xl;
+    }
+
+  }
+  
+  &_image {
+    border-radius: $radius-round;
+
+  }
+
+  &_text {
+    color: $text-light;
+  }
+
+}
+
+.work {
+  padding-top: 2 * $space-xxl;
+
+  &_content {
+    @include content;
+    color: $text-muted;
+
+  }
+
+  &_title {
+
+    @include desktop-s {
+      text-align: center;
+    }
+  }
+
+  &_construction {
+    display: flex;
+    justify-content: center;
+    padding: $space-xl 0;
+  }
+  
+  &_icon {
+    animation-name: rotate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+  }
+
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
