@@ -18,18 +18,18 @@
   background-repeat: no-repeat;
   background-position: left bottom;
   transition: background-size 300ms ease;
-  
+
   &:hover {
     background-size: 100% $space-xxs;
   }
-  
+
   &.active {
     background-image: linear-gradient(90deg, $primary-500, $primary-500);
     background-size: 100% $space-xxs;
     background-repeat: no-repeat;
     background-position: left bottom;
   }
-  
+
   &.noActive {
     &:hover {
       background-size: 0% $space-xxs;
