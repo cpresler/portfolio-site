@@ -2,7 +2,7 @@
 
 .text {
   @include line(m);
-  @include weight(normal);
+  @include weight(light);
   
   @each $name in $weight-names {
     &.weight_#{$name} {
