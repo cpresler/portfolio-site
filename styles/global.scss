@@ -28,3 +28,16 @@ a {
     color: $primary-700;
   }
 }
+
+main {
+  min-height: 80vh;
+
+  & > section {
+    @include container;
+    padding: $space-l 0 $space-xl;
+
+    @include tablet {
+      padding: (2 * $space-xl) 0;
+    }
+  }
+}

@@ -8,9 +8,33 @@
 }
 
 .nav_link {
-  color: $text;
+  @include text-size(m);
   text-decoration: none;
-  padding-bottom: $space-xxs;
+  color: $text;
+  padding-bottom: $space-xs;
+  padding-top: $space-xs;
+  background-image: linear-gradient(90deg, $primary-400, $primary-400);
+  background-size: 0% $space-xxs;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+  
+  &:hover {
+    background-size: 100% $space-xxs;
+  }
+  
+  &.active {
+    background-image: linear-gradient(90deg, $primary-500, $primary-500);
+    background-size: 100% $space-xxs;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  
+  &.noActive {
+    &:hover {
+      background-size: 0% $space-xxs;
+    }
+  }
 }
 
 .ext_link {

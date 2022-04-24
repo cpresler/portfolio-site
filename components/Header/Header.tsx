@@ -23,14 +23,13 @@ const Header = ({ className, dark = false }: Props) => {
   return (
     <div className={classes}>
       <nav className={styles.nav}>
-        <NavLink href={'/'} className={styles.logo}>
-          {/* <Image src={dark ? '/images/christy-presler-logo-light.svg' : '/images/christy-presler-logo-dark.svg'} width="72" height="72" alt="Christy Presler Logo"/> */}
+        <NavLink href={'/'} className={`${styles.logo} ${dark ? styles.light : ''}`} noActive={true}>
           <LogoIcon size={72} />
         </NavLink>
 
         <ul className={styles.nav_links}>
           <li><NavLink href={'/work'} exact={true} className={linkStyles}>Work</NavLink></li>
-          <li><Link href={'/Christy-Presler-resume_2022.pdf'}className={linkStyles} target="_blank">Resume</Link></li>
+          <li><NavLink href={'/Christy-Presler-resume_2022.pdf'} className={linkStyles} target="_blank">Resume</NavLink></li>
           <li><NavLink href={'/about'} exact={true} className={linkStyles}>About</NavLink></li>
         </ul>
       </nav>

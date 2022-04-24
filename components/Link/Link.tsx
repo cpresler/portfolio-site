@@ -32,18 +32,19 @@ export function NavLink({
   children,
   className,
   light = false,
+  noActive = false,
   ...rest
 }: React.PropsWithoutRef<any> & React.RefAttributes<HTMLAnchorElement>): JSX.Element {
+  const { pathname } = useRouter()
+  const isActive = exact ? pathname === href : pathname.startsWith(href)
+
   const classes = classNames(className, {
     [styles.nav_link]: true,
     [styles.light]: light,
+    [styles.active]: isActive && !noActive,
+    [styles.noActive]: noActive,
   })
-  const { pathname } = useRouter()
-  const isActive = exact ? pathname === href: pathname.startsWith(href)
 
-  if (isActive) {
-    className += ` ${styles.active}`
-  }
   return (
     <NextLink href={href}>
       <a className={classes} {...rest}>

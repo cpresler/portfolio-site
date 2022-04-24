@@ -5,22 +5,28 @@
   padding: $space-m 0;
 }
 
-.logo {
-  width: grid-8pt(9); // 72px
-  height: grid-8pt(9); // 72px
-  padding: 0;
-  color: $secondary-400;
-  fill: $secondary-400;
-
-  &:hover {
-    // do something fun here
-  }
-}
-
 .nav {
   @include content;
   display: flex;
   justify-content: space-between;
+
+  .logo {
+    width: grid-8pt(9); // 72px
+    height: grid-8pt(9); // 72px
+    padding: 0;
+    color: $primary-400;
+    fill: $primary-400;
+  
+    &:hover {
+      // do something fun here
+    }
+
+    &.light {
+      color: $secondary-400;
+      fill: $secondary-400;
+    }
+  }
+  
 
   &_links {
     display: flex;
@@ -37,29 +43,8 @@
     }
   }
 
+
   &_link {
-    @include text-size(m);
-    text-decoration: none;
-    color: $text;
-    padding-bottom: $space-xs;
-    padding-top: $space-xs;
-    background-image: linear-gradient(90deg, $primary-400, $primary-400);
-    background-size: 0% $space-xxs;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 300ms ease;
-
-    &:hover {
-      background-size: 100% $space-xxs;
-    }
-
-    &.active {
-      background-image: linear-gradient(90deg, $primary-500, $primary-500);
-      background-size: 100% $space-xxs;
-      background-repeat: no-repeat;
-      background-position: left bottom;
-    }
-
     &.light {
       color: $text-light;
       background-image: linear-gradient(90deg, $secondary-400, $secondary-400);
