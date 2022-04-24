@@ -1,0 +1,33 @@
+@use '../../styles/' as *;
+
+
+.content {
+  @include content;
+  color: $text-muted;
+
+  @include desktop-s {
+    text-align: center;
+  }
+}
+
+.title {
+
+}
+
+.construction {
+  display: flex;
+  justify-content: center;
+  padding: $space-xl 0;
+}
+
+.icon {
+  animation-name: rotate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

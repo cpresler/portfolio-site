@@ -9,6 +9,8 @@
   width: grid-8pt(9); // 72px
   height: grid-8pt(9); // 72px
   padding: 0;
+  color: $secondary-400;
+  fill: $secondary-400;
 
   &:hover {
     // do something fun here
@@ -60,10 +62,10 @@
 
     &.light {
       color: $text-light;
-      background-image: linear-gradient(90deg, $primary-200, $primary-200);
+      background-image: linear-gradient(90deg, $secondary-400, $secondary-400);
       
       &.active {
-        background-image: linear-gradient(90deg, $primary-300, $primary-300);
+        background-image: linear-gradient(90deg, $secondary-500, $secondary-500);
       }
     }
   }

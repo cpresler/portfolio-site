@@ -1,0 +1,39 @@
+@use '../../styles/' as *;
+
+.footer {
+  @include container;
+  background-color: $gray-700;
+  color: $text-muted;
+
+  &_content {
+    @include content;
+    display: flex;
+    justify-content: space-between;
+    padding: $space-l 0;
+
+    @include desktop-s {
+      padding: $space-xl 0;
+    }
+  }
+
+  .copy {
+    @include weight(light);
+  }
+}
+
+
+.social {
+  display: flex;
+  gap: $space-l;
+
+  &_link {
+
+    .icon {
+      color: $text-muted;
+
+      &:hover {
+        color: $secondary-400;
+      }
+    }
+  }
+}

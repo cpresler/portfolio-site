@@ -2,6 +2,7 @@ import classNames from "classnames"
 import styles from './Header.module.scss'
 import Image from 'next/image'
 import Link, { NavLink } from '../Link/Link'
+import LogoIcon from '../Icons/LogoIcon/LogoIcon'
 
 interface Props {
   className?: string
@@ -23,7 +24,8 @@ const Header = ({ className, dark = false }: Props) => {
     <div className={classes}>
       <nav className={styles.nav}>
         <NavLink href={'/'} className={styles.logo}>
-          <Image src={dark ? '/images/christy-presler-logo-light.svg' : '/images/christy-presler-logo-dark.svg'} width="72" height="72" alt="Christy Presler Logo"/>
+          {/* <Image src={dark ? '/images/christy-presler-logo-light.svg' : '/images/christy-presler-logo-dark.svg'} width="72" height="72" alt="Christy Presler Logo"/> */}
+          <LogoIcon size={72} />
         </NavLink>
 
         <ul className={styles.nav_links}>
