@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import Construction from '../components/Construction/Construction'
-import styles from './About.module.scss'
+import styles from './about.module.scss'
 
 const About: NextPage = () => {
   return (

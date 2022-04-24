@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import Construction from '../components/Construction/Construction'
-import styles from './Work.module.scss'
+import styles from './work.module.scss'
 
 const Work: NextPage = () => {
   return (
