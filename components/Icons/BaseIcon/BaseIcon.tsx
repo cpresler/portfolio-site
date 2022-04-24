@@ -10,7 +10,6 @@ interface Props {
   strokeWidth?: number
   fill?: string
   viewbox?: string
-  onClick?: any
   dataVal?: string
 }
 
@@ -21,7 +20,6 @@ const BaseIcon = ({
   strokeWidth,
   fill,
   viewbox,
-  onClick,
   title,
   dataVal,
 }: Props) => {
@@ -43,7 +41,6 @@ const BaseIcon = ({
       strokeLinejoin="round"
       aria-labelledby={title}
       data-val={dataVal}
-      onClick={() => onClick()}
     >
       {children}
     </svg>
