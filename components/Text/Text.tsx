@@ -8,6 +8,7 @@ interface Props {
   size?: string
   tag?: string
   weight?: string
+  line?: string
 }
 
 const Text = ({ 
@@ -16,6 +17,7 @@ const Text = ({
   size,
   tag,
   weight,
+  line
 }: Props) => {
   const classes = classNames(className, {
     [styles.text]: true,
@@ -30,6 +32,12 @@ const Text = ({
     [styles.weight_semibold]: weight === 'semibold',
     [styles.weight_bold]: weight === 'bold',
     [styles.weight_black]: weight === 'black',
+    [styles.line_xs]: line === 'xs',
+    [styles.line_sm]: line === 'sm',
+    [styles.line_m]: line === 'm',
+    [styles.line_l]: line === 'l',
+    [styles.line_xl]: line === 'xl',
+    [styles.line_xxl]: line === 'xxl',
   })
 
   switch (tag) {

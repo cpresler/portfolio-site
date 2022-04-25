@@ -1,7 +1,7 @@
 @use "../../styles/" as *;
 
 .text {
-  @include line(m);
+  @include line(l);
   @include weight(light);
   
   @each $name in $weight-names {
@@ -15,6 +15,12 @@
 @each $size in $text-size-names {
   .size_#{$size} {
     @include text-size($size);
+  }
+}
+
+// Create line height rules based on the map in _types.scss
+@each $size in $line-size-names {
+  .line_#{$size} {
     @include line($size);
   }
 }
@@ -33,24 +39,22 @@ h6.text {
 
 h1.text {
   @include text-size(xl);
-  @include line(xl);
+  @include line(sm);
   padding: $space-s 0 $space-l;
 
   @include desktop-s {
     @include text-size(xxl);
-    @include line(xxl);
     padding: $space-m 0 $space-xl;
   }
 }
 
 h2.text {
   @include text-size(l);
-  @include line(l);
+  @include line(sm);
   padding: $space-xs 0 $space-m;
   
   @include desktop-s {
     @include text-size(xl);
-    @include line(xl);
     padding: $space-xs 0 $space-l;
   }
 }
@@ -63,7 +67,6 @@ h3.text {
   
   @include desktop-s {
     @include text-size(l);
-    @include line(l);
     padding: $space-xs 0 $space-m;
   }
 
@@ -72,7 +75,7 @@ h3.text {
 h4.text {
   @include weight(medium);
   @include text-size(sm);
-  @include line(sm);
+  @include line(l);
   padding: $space-xs 0 $space-s;
 
   @include desktop-s {
@@ -86,7 +89,7 @@ h5.text,
 h6.text {
   @include weight(normal);
   @include text-size(sm);
-  @include line(sm);
+  @include line(l);
 
   @include desktop-s {
     padding: $space-xs 0 $space-s;
