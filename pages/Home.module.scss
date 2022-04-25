@@ -1,9 +1,5 @@
 @use '../styles/' as *;
 
-.home {
-  background-color: $gray-700;
-}
-
 .hero {
   background-color: $gray-700;
   position: relative;
@@ -48,4 +44,10 @@
 
 .work {
   padding-top: 2 * $space-xxl;
+
+  &_content {
+    @include content;
+    display: flex;
+    gap: $space-l;
+  }
 }

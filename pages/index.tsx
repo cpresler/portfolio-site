@@ -3,14 +3,49 @@ import Image from 'next/image'
 import ToolIcon from '../components/Icons/ToolIcon/ToolIcon'
 import Text from '../components/Text/Text'
 import Construction from '../components/Construction/Construction'
+import fs from 'fs'
+import matter from 'gray-matter'
+import Link from '../components/Link/Link'
+import ProjectCard from '../components/ProjectCard/ProjectCard'
 import styles from './Home.module.scss'
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  // get projects
+  const files = fs.readdirSync('projects')
+  
+  const projects = files.map((fileName) => {
+    const slug = fileName.replace('.md', '')
+    const readFile = fs.readFileSync(`projects/${fileName}`, 'utf-8')
+    const { data: frontmatter } = matter(readFile)
+
+    return {
+      slug,
+      frontmatter
+    }
+  })
+
+  return {
+    props: {
+      projects,
+    },
+  }
+}
+
+const Home: NextPage = ({ projects }) => {
   return (
     <>
       <section className={styles.hero}>
         <div className={styles.hero_content}>
-          <Image className={styles.hero_image} src={'/images/christy-sm-sq.jpg'} width={240} height={240} layout='responsive' sizes='60vw' priority={true} alt='Headshot portrait of Christy Presler'/>
+          <Image
+            className={styles.hero_image}
+            src={'/images/christy-sm-sq.jpg'}
+            width={240}
+            height={240}
+            layout='responsive'
+            sizes='60vw'
+            priority={true}
+            alt='Headshot portrait of Christy Presler'
+          />
           <div className={styles.hero_text}>
             <Text tag='h1'>
               Hello! My name is Christy Presler.
@@ -23,7 +58,16 @@ const Home: NextPage = () => {
       </section>
       
       <section className={styles.work}>
-        <Construction />
+        <div className={styles.work_content}>
+          {projects.map(({ slug, frontmatter }) => (
+            <ProjectCard
+              slug={slug}
+              image={frontmatter.thumbnail}
+              title={frontmatter.title}
+              desc={frontmatter.desc}
+            />
+          ))}
+        </div>
       </section>
     </>
   )
