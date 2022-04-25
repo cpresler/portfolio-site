@@ -1,0 +1,14 @@
+@use '../../styles/' as *;
+
+.main {
+  min-height: 85vh;
+
+  & > section {
+    @include container;
+    padding: $space-l 0 $space-xl;
+
+    @include tablet {
+      padding: (2 * $space-xl) 0;
+    }
+  }
+}

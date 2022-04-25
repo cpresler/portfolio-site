@@ -3,6 +3,10 @@
 .container {
   @include container;
   padding: $space-m 0;
+
+  &.dark {
+    background-color: $gray-700;
+  }
 }
 
 .nav {
