@@ -1,4 +1,4 @@
-import classNames from "classnames"
+import classNames from 'classnames'
 import styles from './Header.module.scss'
 import Image from 'next/image'
 import Link, { NavLink } from '../Link/Link'
