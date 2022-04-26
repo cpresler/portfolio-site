@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import fs from 'fs'
 import matter from 'gray-matter'
-import GridContainer from '../components/GridContainer/GridContainer'
-import ProjectCard from '../components/ProjectCard/ProjectCard'
-import Text from '../components/Text/Text'
+import GridContainer from '../../components/GridContainer/GridContainer'
+import ProjectCard from '../../components/ProjectCard/ProjectCard'
+import Text from '../../components/Text/Text'
 import styles from './Work.module.scss'
 
 export async function getStaticProps() {
