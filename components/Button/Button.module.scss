@@ -3,7 +3,7 @@
 .button {
   @include text-size(sm);
   @include weight(medium);
-  line-height: $line-m;
+  @include line(m);
   padding: $textFrameY $textFrameX;
   border: none;
   background-color: $buttonBg;
@@ -55,7 +55,6 @@
   // Standalone Link Button
   &.isStandalone {
     background: transparent;
-    @include weight(bold);
   }
 
 }
