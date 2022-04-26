@@ -2,7 +2,7 @@
 
 .text {
   @include line(l);
-  @include weight(light);
+  // @include weight(light);
   
   @each $name in $weight-names {
     &.weight_#{$name} {
@@ -24,75 +24,3 @@
     @include line($size);
   }
 }
-
-// Heading defaults
-h1.text,
-h2.text,
-h3.text,
-h4.text,
-h5.text,
-h6.text {
-  font-family: $family-sans-serif;
-  @include weight(semibold);
-  color: inherit;
-}
-
-h1.text {
-  @include text-size(xl);
-  @include line(sm);
-  padding: $space-s 0 $space-l;
-
-  @include desktop-s {
-    @include text-size(xxl);
-    padding: $space-m 0 $space-xl;
-  }
-}
-
-h2.text {
-  @include text-size(l);
-  @include line(sm);
-  padding: $space-xs 0 $space-m;
-  
-  @include desktop-s {
-    @include text-size(xl);
-    padding: $space-xs 0 $space-l;
-  }
-}
-
-h3.text {
-  @include weight(medium);
-  @include text-size(m);
-  @include line(m);
-  padding: $space-xs 0 $space-s;
-  
-  @include desktop-s {
-    @include text-size(l);
-    padding: $space-xs 0 $space-m;
-  }
-
-}
-
-h4.text {
-  @include weight(medium);
-  @include text-size(sm);
-  @include line(l);
-  padding: $space-xs 0 $space-s;
-
-  @include desktop-s {
-    @include text-size(m);
-    @include line(m);
-    padding: $space-xs 0 $space-m;
-  }
-}
-
-h5.text,
-h6.text {
-  @include weight(normal);
-  @include text-size(sm);
-  @include line(l);
-
-  @include desktop-s {
-    padding: $space-xs 0 $space-s;
-  }
-}
-

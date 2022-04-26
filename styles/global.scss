@@ -6,7 +6,6 @@
 @use "./index.scss" as *;
 
 // Global Level Styles
-
 html {
   background-color: $gray-100;
   font-size: 16px;
@@ -17,6 +16,7 @@ body {
   @include weight(light);
   font-size: 1rem;
   color: $gray-800;
+  @include line(xl);
 }
 
 a {
@@ -26,5 +26,100 @@ a {
 
   &:hover {
     color: $primary-700;
+  }
+}
+
+// Typography globals
+//  Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include weight(semibold);
+  color: inherit;
+}
+
+h1 {
+  @include text-size(xl);
+  @include line(sm);
+  padding: $space-s 0 $space-l;
+
+  @include desktop-s {
+    @include text-size(xxl);
+    padding: $space-m 0 $space-xl;
+  }
+}
+
+h2 {
+  @include text-size(l);
+  @include line(sm);
+  padding: $space-xs 0 $space-m;
+  
+  @include desktop-s {
+    @include text-size(xl);
+    padding: $space-xs 0 $space-l;
+  }
+}
+
+h3 {
+  @include weight(medium);
+  @include text-size(m);
+  @include line(m);
+  padding: $space-xs 0 $space-s;
+  
+  @include desktop-s {
+    @include text-size(l);
+    padding: $space-xs 0 $space-m;
+  }
+}
+
+h4 {
+  @include weight(medium);
+  @include text-size(sm);
+  @include line(l);
+  padding: $space-xs 0 $space-s;
+
+  @include desktop-s {
+    @include text-size(m);
+    @include line(m);
+    padding: $space-xs 0 $space-m;
+  }
+}
+
+h5
+h6 {
+  @include weight(normal);
+  @include text-size(sm);
+  @include line(l);
+
+  @include desktop-s {
+    padding: $space-xs 0 $space-s;
+  }
+}
+
+//  Paragraphs
+p {
+  padding: $space-xs 0 $space-m;
+}
+
+// Code && Blockquotes
+code {
+  padding: $space-xs $space-s;
+  border-radius: $radius-s;
+  background-color: $gray-200;
+}
+
+blockquote {
+  padding-left: $space-m;
+  margin-bottom: $space-m;
+  @include text-size(m);
+  @include weight(normal);
+  @include line(l);
+  border-left: grid-4pt(1) solid $gray-200;
+
+  @include desktop-s {
+    padding-left: $space-l;
   }
 }
