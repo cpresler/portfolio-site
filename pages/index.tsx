@@ -2,11 +2,11 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import ToolIcon from '../components/Icons/ToolIcon/ToolIcon'
 import Text from '../components/Text/Text'
-import Construction from '../components/Construction/Construction'
 import fs from 'fs'
 import matter from 'gray-matter'
 import Link from '../components/Link/Link'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
+import GridContainer from '../components/GridContainer/GridContainer'
 import styles from './Home.module.scss'
 
 export async function getStaticProps() {
@@ -59,14 +59,19 @@ const Home: NextPage = ({ projects }) => {
       
       <section className={styles.work}>
         <div className={styles.work_content}>
-          {projects.map(({ slug, frontmatter }) => (
-            <ProjectCard
-              slug={slug}
-              image={frontmatter.thumbnail}
-              title={frontmatter.title}
-              desc={frontmatter.desc}
-            />
-          ))}
+          <Text tag='h2'>
+            Selected Work
+          </Text>
+          <GridContainer>
+            {projects.map(({ slug, frontmatter }) => (
+              <ProjectCard
+                slug={slug}
+                image={frontmatter.thumbnail}
+                title={frontmatter.title}
+                desc={frontmatter.desc}
+              />
+            ))}
+          </GridContainer>
         </div>
       </section>
     </>

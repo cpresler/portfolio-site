@@ -45,9 +45,11 @@
 .work {
   padding-top: 2 * $space-xxl;
 
+  @include desktop-s {
+    padding-top: 3 * $space-xxl;
+  }
+
   &_content {
     @include content;
-    display: flex;
-    gap: $space-l;
   }
 }
