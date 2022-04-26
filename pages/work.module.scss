@@ -1,2 +1,9 @@
 @use '../styles/' as *;
 
+.container {
+  @include container;
+}
+
+.content {
+  @include content;
+}
