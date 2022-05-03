@@ -1,8 +1,8 @@
 import classNames from "classnames"
-import styles from './Layout.module.scss'
+import styles from './AppLayout.module.scss'
 import Head from 'next/head'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 import { useRouter } from 'next/router'
 
 
@@ -11,7 +11,7 @@ interface Props {
   className?: string
 }
 
-const Layout = ({ children, className }: Props) => {
+const AppLayout = ({ children, className }: Props) => {
   const router = useRouter()
   const dark = router.pathname === '/'
   
@@ -41,4 +41,4 @@ const Layout = ({ children, className }: Props) => {
   )
 }
 
-export default Layout
+export default AppLayout
