@@ -11,13 +11,15 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.1.1",
+    "@mdx-js/react": "^2.1.1",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
-    "markdown-it": "^13.0.0",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-ga": "^3.3.0",
+    "remark-frontmatter": "^4.0.1",
     "sass": "^1.50.1",
     "sb": "^6.4.22",
     "storybook-addon-next-router": "^3.1.1",

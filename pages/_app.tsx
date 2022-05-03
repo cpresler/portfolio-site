@@ -1,12 +1,16 @@
 import '../styles/global.scss'
 import type { AppProps } from 'next/app'
-import Layout from '../components/Layout/Layout'
+import { MDXProvider } from '@mdx-js/react'
+import MDXComponents from '../components/MDXComponents/MDXComponents'
+import Layout from '../layouts/AppLayout/AppLayout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout >
-      <Component {...pageProps} />
-    </Layout>
+    <MDXProvider components={MDXComponents}>
+      <Layout >
+        <Component {...pageProps} />
+      </Layout>
+    </MDXProvider>
   )
 }
 

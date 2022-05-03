@@ -6,21 +6,11 @@ import GridContainer from '../../components/GridContainer/GridContainer'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import Text from '../../components/Text/Text'
 import styles from './Work.module.scss'
+import { getProjects } from '../../utils'
 
 export async function getStaticProps() {
   // get projects
-  const files = fs.readdirSync('projects')
-  
-  const projects = files.map((fileName) => {
-    const slug = fileName.replace('.md', '')
-    const readFile = fs.readFileSync(`projects/${fileName}`, 'utf-8')
-    const { data: frontmatter } = matter(readFile)
-
-    return {
-      slug,
-      frontmatter
-    }
-  })
+  const projects = getProjects()
 
   return {
     props: {
@@ -39,12 +29,12 @@ const Work: NextPage = ({ projects }) => {
         <Text tag='h1'>Selected Work</Text>
 
         <GridContainer>
-          {projects.map(({ slug, frontmatter }) => (
+          {projects.map(({ slug, data }) => (
             <ProjectCard
               slug={slug}
-              image={frontmatter.thumbnail}
-              title={frontmatter.title}
-              desc={frontmatter.desc}
+              image={data.thumbnail}
+              title={data.title}
+              desc={data.desc}
             />
           ))}
         </GridContainer>
