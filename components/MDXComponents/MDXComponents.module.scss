@@ -1,1 +1,13 @@
 @use '../../styles/' as *;
+
+.featured {
+  margin-bottom: $space-l;
+  @include text-size(m);
+  @include line(l);
+  color: $text-primary;
+  
+  @include desktop-s {
+    margin-bottom: $space-l;
+    @include text-size(l);
+  }
+}

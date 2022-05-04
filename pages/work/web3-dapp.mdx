@@ -1,0 +1,54 @@
+---
+  title: 'Web3 DApp'
+  desc: 'Create a design system and iterate quickly to get a MVP DApp deployed on ETH Mainnet.'
+  thumbnail: ''
+  tags: ['Next JS', 'MetaMask', 'Web3.js', 'React', 'Sass', 'Design Systems']
+  projectDate: '3/2022'
+  published: true
+---
+
+# Web3 DApp
+
+<Text>Design system creation and rapid iterative prototyping to quickly get a minimum viable product DApp deployed on Ethereum Mainnet.</Text>
+
+## Goal
+
+Quickly bring a minimum viable product to market by building out the user experience, contract interactions, and metamask wallet integration for a distributed application that had been started by the client.
+
+
+## Team
+
+  - My Team: Design Technologists x2, Front End Developer, Back End Developer, Smart Contract Engineer, Product Owner
+  - Client: Smart Contract Engineer, Product Owner
+
+## Process
+
+### Discovery - User Flows, Establishing MVP
+
+  I lead the discovery phase to establish the core feature requirements of the application. To build consensus and understanding amongst the entire team we created a user flow diagram that mapped the core features of the application and how a user could move through them. This document became a core reference for both the client and our team in clearly communicating what we were building.
+
+  Along with creating a user flow diagram we created a feature list, and did a collaborative exercise of connecting those features with the different parts of the application, so that everyone was clear what functionality needed to exist where. This information combined with the partially built existing API let us create a data structure for the different screens needed in the DApp.
+
+  After establishing features and a data model, we then paired down the features into those that were absolutely required to launch the DApp so that we could get it to market within the client's desired time frame.
+
+### Creating the Design System and Component Driven Development
+
+  The client had provided some basic brand guidelines, so the other Design Technologist and I divided up the tasks necessary to create the beginning of a design system - global variables, mixin/function utilities, core components. While I finalized the user flow diagrams as a deliverable, and vetted user stories in the backlog in collaboration with our Product Owner, my colleague established the global variables and mixin/function utilities. Once those were merged, I began building out core components that could be used throughout the DApp - button, link, layout containers, form inputs, icons, etc.
+
+  Taking the time to build this way is actually slightly slower at the beginning than just throwing together a nice looking layout and building it from scratch, but the real value shines as an application begins to scale. Using React's support for [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) using Scss, it is possible to set up a system of components that can be used throughout the application - essentially keeping the styling of those page elements governed in a single component - while also enabling situational overrides for those one-off scenarios that require a slightly different usage of the component than other places. That flexibility is key for making the components easy for developers to use.
+
+  For example, once we built out the components required for building a form into the DApp - input, label, textarea, range component, select element - we were able to utilize those components in the several other instances of forms throughout the DApp without worrying about styling conflicts, or needing an explicit style guide that showed what an input element should look like as that data is essentially self-documenting in the input component files.
+
+  The pattern of component driven user interfaces partners well with test driven development practices as well as documentation add-ons like Storybook. Essentially, a little bit of extra effort up front improves both the developer and user experiences with the application. An intrinsic part of my skill-set is building out components and tooling that allow other developers who may not have my design sensibilities to build out new interface screens with existing components while maintaining consistent interface patterns that lend themselves to excellent user experience.
+
+## A Challenge and What I learned
+
+  This project posed a late stage challenge that was one of the toughest I have faced in my career. It was discovered shortly before launch that a required feature of the application had been missed during discovery and would require server-side rendering capabilities. Due to the hosting location of this DApp that posed real problems, and as a result I converted the existing Create React App into a Next JS app in order to utilize Next JS' SSR functionality.
+
+  What I learned through this process:
+  - Next JS - I knew about it, but had not used it, so converting the app required me to self-study Next JS along with migrating the core functionality of the DApp
+  - How to force dynamic loading of certain types of interactive components within Next JS so that things like the Metamask wallet integration did not try to run when the DApp compiled.
+
+  I was able to successfully migrate the DApp, help launch it, and learn a new technology in the process - it is part of why this site is built on Next JS!
+
+export default ({children}) => <Project>{children}</Project>
