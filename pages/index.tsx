@@ -7,6 +7,24 @@ import GridContainer from '../components/GridContainer/GridContainer'
 import styles from './Home.module.scss'
 import { getProjects } from '../utils'
 
+// TODO: convert this into a separate type model, so it doesn't have to be repeated
+interface Props {
+  projects: [
+    {
+      slug: string
+      data: {
+        title: string
+        desc: string
+        thumbnail: string
+        tags: Array<string>
+        projectDate: string
+        published: boolean
+      }
+      content: string
+    }
+  ]
+}
+
 export async function getStaticProps() {
   // get projects
   const projects = getProjects(4)
@@ -18,7 +36,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home: NextPage = ({ projects }) => {
+const Home: NextPage<Props> = ({ projects }) => {
   return (
     <>
       <section className={styles.hero}>

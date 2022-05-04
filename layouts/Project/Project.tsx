@@ -3,7 +3,7 @@ import styles from './Project.module.scss'
 
 
 interface Props {
-  children: ReactNode
+  children: React.ReactNode
   className?: string
 }
 
