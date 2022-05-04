@@ -12,7 +12,7 @@
     padding: $space-l 0 $space-xl;
 
     @include desktop-s {
-      padding: (2 * $space-xl) 0;
+      padding: $space-xl 0;
     }
   }
 }

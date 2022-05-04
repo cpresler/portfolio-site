@@ -1,8 +1,6 @@
 @use "../../styles/" as *;
 
 .text {
-  @include line(l);
-  // @include weight(light);
   
   @each $name in $weight-names {
     &.weight_#{$name} {

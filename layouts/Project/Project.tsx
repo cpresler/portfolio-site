@@ -16,7 +16,7 @@ const Project = ({ children, className }: Props) => {
 
 
   return (
-    <section>
+    <section className={styles.project}>
       <div className={classes}>
         {children}
       </div>
