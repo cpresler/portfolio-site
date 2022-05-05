@@ -7,25 +7,7 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import Text from '../../components/Text/Text'
 import styles from './Work.module.scss'
 import { getProjects } from '../../utils'
-
-
-// TODO: convert this into a separate type model, so it doesn't have to be repeated
-interface Props {
-  projects: [
-    {
-      slug: string
-      data: {
-        title: string
-        desc: string
-        thumbnail: string
-        tags: Array<string>
-        projectDate: string
-        published: boolean
-      }
-      content: string
-    }
-  ]
-}
+import { Projects } from '../../types/ObjectTypes'
 
 
 export async function getStaticProps() {
@@ -39,7 +21,7 @@ export async function getStaticProps() {
   }
 }
 
-const Work: NextPage<Props> = ({ projects }) => {
+const Work: NextPage<Projects> = ({ projects }) => {
   return (
     <section>
       <Head>

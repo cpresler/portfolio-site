@@ -1,29 +1,12 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Text from '../components/Text/Text'
-import fs from 'fs'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 import GridContainer from '../components/GridContainer/GridContainer'
 import styles from './Home.module.scss'
 import { getProjects } from '../utils'
+import { Projects } from '../types/ObjectTypes'
 
-// TODO: convert this into a separate type model, so it doesn't have to be repeated
-interface Props {
-  projects: [
-    {
-      slug: string
-      data: {
-        title: string
-        desc: string
-        thumbnail: string
-        tags: Array<string>
-        projectDate: string
-        published: boolean
-      }
-      content: string
-    }
-  ]
-}
 
 export async function getStaticProps() {
   // get projects
@@ -36,7 +19,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home: NextPage<Props> = ({ projects }) => {
+const Home: NextPage<Projects> = ({ projects }) => {
   return (
     <>
       <section className={styles.hero}>
@@ -49,7 +32,7 @@ const Home: NextPage<Props> = ({ projects }) => {
             layout='responsive'
             sizes='60vw'
             priority={true}
-            alt='Headshot portrait of Christy Presler'
+            alt='Portrait of Christy Presler'
           />
           <div className={styles.hero_text}>
             <Text tag='h1'>
