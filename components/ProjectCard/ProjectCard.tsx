@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from '../Link/Link'
 import Text from '../Text/Text'
 import Button from '../Button/Button'
+import ResponsiveImage from '../ResponsiveImage/ResponsiveImage'
 
 interface Props {
   className?: string
@@ -24,12 +25,11 @@ const ProjectCard = ({ className, slug, image, title, desc = '' }: Props) => {
       className={classes}
     >
       <Link href={`/work/${slug}`} className={styles.card_link}>
-        <Image
+        <ResponsiveImage
           width={480}
           height={360}
           alt={title}
-          src={`/${image}`}
-          layout='responsive'
+          src={`${image}`}
           className={styles.card_image}
         />
         <div className={styles.card_details}>

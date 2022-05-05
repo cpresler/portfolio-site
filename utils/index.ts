@@ -25,7 +25,22 @@ export function getProjects(limit = 0) {
         content,
       }
     })
-    .filter((project) => project)
+    // filter out non projects and unpublished projects
+    .filter((project) => (project && project.data.published))
+    // sort projects most recent first
+    // @ts-ignore:next-line
+    .sort(({ data: a}, { data: b }) => {
+      const dateA = a.projectDate
+      const dateB = b.projectDate
+      
+      if (dateA < dateB) {
+        return 1
+      } else if (dateA > dateB) {
+        return -1
+      } else {
+        return 0
+      }
+    })
 
   // optional limit for when we don't want all projects
   if (limit) {
