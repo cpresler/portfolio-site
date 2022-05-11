@@ -1,29 +1,55 @@
 ---
   title: 'Product Information System Redesign'
-  desc: ''
+  desc: 'Upgrade information entry while restructuring data shape to make it available to internal systems'
   thumbnail: ''
-  tags: ['Sass', 'Design Systems', 'React', 'Next JS', 'MetaMask', 'Web3.js']
+  tags: ['Information Architecture', 'User Interviews', 'User Testing']
   projectDate: '2019-10-01'
   published: true
 ---
 
 # Product Information System Redesign
 
-<Text></Text>
-
-## Goal
-
-
-
-## Team
-
-
+<Label>Primary Goal</Label>
+<Text>Prepare to rebuild on-site search and product detail pages by optimizing product data available to the e-commerce website via restructuring the data and upgrading the internal Product Information Management (PIM) system.</Text>
 
 ## Process
 
+### Document Existing Data
 
+  The existing custom data system did not have any documentation listing existing attributes or attaching them to specific types of product, so I started by defining all of the pre-existing data points and then mapping them to types of products by interviewing internal teams.
 
-## Outcome
+### Research
 
+  In order to better understand what data points we should be collecting about our product, I conducted research in several ways:
+  
+  **Interviews:** I talked with customers and the website's primary internal users about how they interacted with site search filters
+
+  **White Papers:** I read white papers about best practices for search filtering experiences
+
+  **Competitor Review:** I catalogued what competitors in the space were providing for their customers in terms of search filters and product details.
+  
+  The outcome provided a holistic view of what data we should be gathering about the various types of product sold.
+
+### Internal User Testing
+
+  Getting the data model for this project correct was very important because setting up the data map inside of the new system and integrating it with our internal systems was a labor intensive process.
+
+  To be sure I had the data model correct I took it back to the primary users of the PIM — the Product Information Team — and talked over various product examples to make sure we had covered all the necessary use cases. These follow up conversations provided necessary feedback for a few small adjustments and primarily validated that the data model was accurate.
+
+### Implementation
+
+  I had early meetings with the developers on the implementation team to understand what data shapes the new platform supported, so I returned to the team feeling confident that the data structure we had setup would work well. Overall that was true, but we ran into several snags that didn't allow for us to update the data model quite in the way we had hoped due to some late-discovered legacy internal systems that needed to be supported. We eventually got by around the issues by testing small sets of changes and see what could be supported — in the end the majority of my upgrades were viable — but it was a much slower process than anticipated.
+
+  As part of implementing the new system, I designed spreadsheets that could be used by the product team to gather data from vendors and automate the process of initial information entry. These spreadsheets and the updated workflows around them ultimately decreased data entry time by about 70%, freeing up resources to other necessary e-commerce product functions.
+
+ When we finally migrated to the new PIM we managed to 
+
+## Something I Learned
+
+  This project taught me the importance of thorough discovery involving all of the right stakeholders and the need for systems training being timed correctly.
+
+  Several key technical stakeholders were left out of initial project discovery and resulted in un-noticed legacy systems that needed ongoing support from the new system, unfortunately that made many of our upgrades needlessly difficult or blocked them entirely. I learned a great deal about the types of questions that should be asked when attempting an upgrade to a legacy system.
+
+  Training: We chose to do training on the new software shortly prior to launch which made sense from a user perspective, but came entirely to late for the team members working to implement the software. Major time and effort could have been saved by gaining a greater understanding of how the system operated sooner. On major projects like this, it has made me a proponent of making at least one team member into an internal expert on the particular software being implemented so that they can work on spreading knowledge to the rest of the team.
 
 export default ({children}) => <Project>{children}</Project>
