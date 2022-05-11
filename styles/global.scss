@@ -55,16 +55,16 @@ h1 {
 h2 {
   @include text-size(l);
   @include line(sm);
-  padding: $space-xs 0 $space-m;
+  padding: $space-s 0 $space-m;
   
   @include desktop-s {
     @include text-size(xl);
-    padding: $space-xs 0 $space-l;
+    padding: $space-m 0 $space-l;
   }
 }
 
 h3 {
-  @include weight(medium);
+  @include weight(normal);
   @include text-size(m);
   @include line(m);
   padding: $space-xs 0 $space-s;
@@ -76,7 +76,7 @@ h3 {
 }
 
 h4 {
-  @include weight(medium);
+  @include weight(normal);
   @include text-size(sm);
   @include line(l);
   padding: $space-xs 0 $space-s;
@@ -121,5 +121,19 @@ blockquote {
 
   @include desktop-s {
     padding-left: $space-l;
+  }
+}
+
+// Content List Defaults
+main {
+  
+  ul {
+    padding-left: $space-l;
+    list-style-type: disc;
+
+    li {
+      padding: $space-xs 0;
+    }
+    
   }
 }

@@ -1,13 +1,27 @@
 @use '../../styles/' as *;
 
+.label {
+  @include text-size(sm);
+  color: $text-muted;
+  padding-bottom: $space-s;
+}
+
 .featured {
-  margin-bottom: $space-l;
+  margin-bottom: $space-s;
   @include text-size(m);
   @include line(l);
   color: $text-primary;
   
   @include desktop-s {
-    margin-bottom: $space-l;
     @include text-size(l);
+  }
+}
+
+.sectionTitle {
+  margin-top: $space-m;
+  margin-bottom: $space-s;
+
+  @include desktop-s {
+    margin-top: $space-l;
   }
 }

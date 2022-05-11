@@ -1,29 +1,73 @@
 ---
   title: 'E-commerce Redesign and Replatform'
-  desc: ''
+  desc: 'Modernize an enterprise scale e-commerce site by building a design system and leveraging new data'
   thumbnail: ''
-  tags: []
+  tags: ['Design Systems', 'Product Design', 'User Interviews', 'User Testing', 'Information Architecture']
   projectDate: '2020-09-01'
   published: true
 ---
 
 # E-commerce Redesign and Replatform
 
-<Text></Text>
-
-## Goal
-
-
-
-## Team
-
-
+<Label>Primary Goal</Label>
+<Text>Modernize an enterprise scale e-commerce site by redesigning the user experience and relaunching on a new software platform.</Text>
 
 ## Process
 
+### Internal Discovery and Platform Selection
+
+  The extensive internal discovery pre-work for this project saved major time and money on the project as a whole. This project was a full overhaul of an existing e-commerce site that had been in existence for more than a decade and built into several custom internal software solutions and processes.
+  
+  #### Step 1 - Map What Exists
+
+  Mapping the customer-facing and internal-facing functionality of this project was a team effort between myself, another Senior UX Designer, and a Business Analyst. I took point on creating user flows for a few key areas of functionality: onsite search, e-commerce checkout, and internal order processing. To get a full idea of the processes I analyzed existing site data, collaborated with developers to document existing edge cases, and interviewed internal stakeholders on their existing processes.
+
+  Creating user flows, and service blueprints of current data and systems integrated allowed us to get an idea of the scope of migrating the site.
+
+  #### Step 2 - Choose a Platform
+
+  I was part of an internal panel that reviewed several software platforms for needed functionality, extensibility, and scalability. Using the data gathered by my team I was able to help make an informed decision to replatform the e-commerce site to [Sitecore](https://www.sitecore.com/). The move allowed us to maintain key integrations to existing internal functionality while enabling significant upgrades in the customer facing functionality and creating a foundation for future internal upgrades.
+
+### Vetting Information Architecture
+
+  Rebuilding the website from scratch presented the unusual opportunity to reconfigure the customer facing page structure for a better user experience. I advocated for, and ran remote user tree tests on the existing navigation structure using [Optimal Sort from Optimal Workshop](https://www.optimalworkshop.com/optimalsort/). The findings of the tests showed that the existing navigation needed some basic adjustments that were incorporated into the updated designs. 
+
+  > Whenever possible I try to base design decisions on user data to make sure the product is tailored to the intended audience.
+
+
+### Creating a Design System
+
+  Part of the site redesign was bringing the site into alignment with current brand guidelines, and making sure that the site would be easier to update/maintain moving forward. Creating a solid design system was essential to this being possible. Font and color choices had already been established by the brand guide, but creating components that could be configured for use in various parts of the site was a key. In addition to core components like links, buttons, and icons, establishing modals and product cards played a huge role in the design system.
+
+  Combining the base elements into page templates for content marketing creation helped to test and refine the system as it was being created.
+
+### Designing Core functionality
+
+  The core functionality of the e-commerce experience is: navigation/search, product listing pages, product detail pages, and checkout. Users interact with each of these features differently, but they deal with the key features of e-commerce — finding, choosing, purchasing.
+
+  I was involved in depth with redesigning onsite search and the checkout experience. 
+
+#### Search
+
+  The previous search experience had been cluttered and - for technical reasons - overused within the site navigation. Via customer interviews, internal interviews, white paper review, and data analysis we determined the key functionality needed for the overall search experience was better user controls through filtering. The inventory of this site is large and varied, so giving users the tools to narrow down to the products they are interested in is key.
+
+  Thankfully due to expanded product data — [provided by an earlier project I had done](/work/product-information-redesign) — we had the ability to provide a greater variety of filters for product than previously supported. We were also able to incorporate better visuals into filters that allowed for that — while maintaining accessibility. The result was a search experience that was significantly easier to navigate.
+
+  In addition to filters, we focused heavily on the product information cards themselves. Product cards are notoriously complex because the space is minimal and the impact is very high. There needs to be enough descriptive information on the card to allow the user to make choices, but not too much information or the user will quickly become overwhelmed with information. The key decisions that happen when a user is browsing search results also make it a very high impact point for company goals. As a UX designer I navigated helping the internal stakeholders prioritize information that should go on the cards, and also understand why certain things should be left off of the cards. These conversations required me to pull from my knowledge of UX best practices, design principles, and software development best practices. The end result was cleaner, easier to read, and maintains a balance between business initiatives and optimized user experience.
+
+### User Testing the Prototype
+
+  Another key feature of this redesign was running user tests on the rough prototype with [UserTesting.com](https://www.usertesting.com/). The tests focused on how easily users could find product and key product information as well as feedback on their impression of interacting with the site. Analyzing the results of these tests largely validated that the decisions we had made were in the correct direction to move the site experience forward for our customers.
 
 
 ## A Challenge and What I learned
 
+  A major challenge when it comes to creating design systems is forming base components that are flexible enough to scale well across use cases while also maintaining style and form that keeps the components on brand. Ideally design systems enable rapid iteration and prototyping of new experiences because the majority of design decisions have been baked into the system — thus providing a continuity of experience when many people are building an interface. 
+
+  On this project, I got a deep dive into [Storybook](https://storybook.js.org/) and how it can be a dynamic testing ground for vetting design decisions as they are being made. This project utilized Storybook as a place for initial UI development to happen in conjunction with the design process. This shortens the feedback loop on potential issues with the design and allows the entire team to work together to solve for those problems earlier in the process.
+
+  The way we utilized Storybook on this project also opened my eyes to a better method of integrating the design team into Agile sprints. This is a process change I have found incredibly valuable — both on this project — and on many projects since. In my experience, the closer the design/product teams can work with the development teams the better the outcome for the teams and for the software produced. Storybook has the ability to be a collaboration playground that provides huge value to the team and product. It gives designers and developers a place to collaborate openly about what is and is not working in the design system elements while also seeing how the base level elements combine into composite components.
+
+  Storybook implementations take time and resources, but due to the outcomes it can provide, I have pushed for it whenever creating a design system since working on this project.
 
 export default ({children}) => <Project>{children}</Project>
