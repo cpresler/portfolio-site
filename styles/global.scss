@@ -82,15 +82,13 @@ h4 {
   padding: $space-xs 0 $space-s;
 
   @include desktop-s {
-    @include text-size(m);
-    @include line(m);
     padding: $space-xs 0 $space-m;
   }
 }
 
-h5
+h5,
 h6 {
-  @include weight(normal);
+  @include weight(light);
   @include text-size(sm);
   @include line(l);
 
@@ -130,6 +128,7 @@ main {
   ul {
     padding-left: $space-l;
     list-style-type: disc;
+    margin-bottom: $space-l;
 
     li {
       padding: $space-xs 0;

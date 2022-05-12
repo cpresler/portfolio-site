@@ -12,6 +12,7 @@ const MDXComponents = {
   a: (props: any) => <Link {...props} className={styles.link} />,
   h1: (props: any) => <Text tag='h1' {...props} className={styles.pageTitle} />,
   h2: (props: any) => <Text tag='h2' {...props} className={styles.sectionTitle} />,
+  h3: (props: any) => <Text tag='h3' {...props} className={styles.subsectionTitle} />,
   Project: (props: any) => <Project {...props} className={styles.project} />,
   MetaData: (props: any) => <MetaData {...props} />,
   ResponsiveImage: (props: any) => <ResponsiveImage {...props} className={styles.img} />,

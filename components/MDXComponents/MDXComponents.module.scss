@@ -25,3 +25,16 @@
     margin-top: $space-l;
   }
 }
+
+.subsectionTitle {
+  margin-top: $space-m;
+  margin-bottom: $space-s;
+  
+  @include desktop-s {
+    margin-top: $space-l;
+  }
+
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
+}

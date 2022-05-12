@@ -12,62 +12,61 @@
 <Label>Primary Goal</Label>
 <Text>Modernize an enterprise scale e-commerce site by redesigning the user experience and relaunching on a new software platform.</Text>
 
-## Process
+## My Process
 
 ### Internal Discovery and Platform Selection
 
-  The extensive internal discovery pre-work for this project saved major time and money on the project as a whole. This project was a full overhaul of an existing e-commerce site that had been in existence for more than a decade and built into several custom internal software solutions and processes.
+  The full overhaul of a decade-old e-commerce site is a large undertaking, so extensive discovery was a key part of the process.
   
-  #### Step 1 - Map What Exists
+  #### First, Map What Exists
 
-  Mapping the customer-facing and internal-facing functionality of this project was a team effort between myself, another Senior UX Designer, and a Business Analyst. I took point on creating user flows for a few key areas of functionality: onsite search, e-commerce checkout, and internal order processing. To get a full idea of the processes I analyzed existing site data, collaborated with developers to document existing edge cases, and interviewed internal stakeholders on their existing processes.
+  Mapping the customer and internal facing site functionality was done collaboratively. I focused on creating user flows for: on-site search, e-commerce checkout, and internal order processing. 
 
-  Creating user flows, and service blueprints of current data and systems integrated allowed us to get an idea of the scope of migrating the site.
+  I created documentation and user flows from existing site data, working with developers on edge cases documented in the code, and from interviews of internal stakeholders.
 
-  #### Step 2 - Choose a Platform
+  #### Second, Choose a Platform
 
-  I was part of an internal panel that reviewed several software platforms for needed functionality, extensibility, and scalability. Using the data gathered by my team I was able to help make an informed decision to replatform the e-commerce site to [Sitecore](https://www.sitecore.com/). The move allowed us to maintain key integrations to existing internal functionality while enabling significant upgrades in the customer facing functionality and creating a foundation for future internal upgrades.
+  As a member of the panel selecting a new software platform, I was able to use the documentation and user flows my team created to make an informed decision to replatform the e-commerce site to [Sitecore](https://www.sitecore.com/). The moved allowed us to maintain our technical stack, integrate with the internal legacy systems, and create a foundation for future upgrades.
 
-### Vetting Information Architecture
+### User Tree Testing
 
-  Rebuilding the website from scratch presented the unusual opportunity to reconfigure the customer facing page structure for a better user experience. I advocated for, and ran remote user tree tests on the existing navigation structure using [Optimal Sort from Optimal Workshop](https://www.optimalworkshop.com/optimalsort/). The findings of the tests showed that the existing navigation needed some basic adjustments that were incorporated into the updated designs. 
-
-  > Whenever possible I try to base design decisions on user data to make sure the product is tailored to the intended audience.
-
+  Our existing data around how customers were using our navigation was inconclusive. So I advocated for taking the time to run tree tests on our navigation with remote users via [Optimal Sort from Optimal Workshop](https://www.optimalworkshop.com/optimalsort/). These tests provided the necessary information to make data driven decisions around our navigation. Whenever possible, I prefer to let user behavior inform my UX design choices.
 
 ### Creating a Design System
 
-  Part of the site redesign was bringing the site into alignment with current brand guidelines, and making sure that the site would be easier to update/maintain moving forward. Creating a solid design system was essential to this being possible. Font and color choices had already been established by the brand guide, but creating components that could be configured for use in various parts of the site was a key. In addition to core components like links, buttons, and icons, establishing modals and product cards played a huge role in the design system.
+  Creating a design system allowed us to bring the site into alignment with current brand guidelines, and ensure it could be easily maintained in the future. I set up a component system within Sketch that allowed us to focus on reusable components that could be configured throughout the site to create the core functionality that was needed.
 
-  Combining the base elements into page templates for content marketing creation helped to test and refine the system as it was being created.
+  The design system was built in conjunction with page templates and other features so that it could be adjusted and polished across use-cases as we worked to lay out the full functionality of the site.
 
 ### Designing Core functionality
 
-  The core functionality of the e-commerce experience is: navigation/search, product listing pages, product detail pages, and checkout. Users interact with each of these features differently, but they deal with the key features of e-commerce — finding, choosing, purchasing.
-
-  I was involved in depth with redesigning onsite search and the checkout experience. 
+  The core features of any e-commerce experience are: navigation/search, product listing pages, product detail pages, and checkout. On this project I focused on on-site search.
 
 #### Search
 
-  The previous search experience had been cluttered and - for technical reasons - overused within the site navigation. Via customer interviews, internal interviews, white paper review, and data analysis we determined the key functionality needed for the overall search experience was better user controls through filtering. The inventory of this site is large and varied, so giving users the tools to narrow down to the products they are interested in is key.
+  The primary goal of search is to make it easy for users to find what they are looking for. That requires fast results, displaying the right amount of relevant information on result listings, and making it easy for users to browse results with appropriate sorting/filtering controls.
 
-  Thankfully due to expanded product data — [provided by an earlier project I had done](/work/product-information-redesign) — we had the ability to provide a greater variety of filters for product than previously supported. We were also able to incorporate better visuals into filters that allowed for that — while maintaining accessibility. The result was a search experience that was significantly easier to navigate.
+  The new platform vastly improved the speed at which results were returned, so my primary focus was on sorting/filtering and result cards.
 
-  In addition to filters, we focused heavily on the product information cards themselves. Product cards are notoriously complex because the space is minimal and the impact is very high. There needs to be enough descriptive information on the card to allow the user to make choices, but not too much information or the user will quickly become overwhelmed with information. The key decisions that happen when a user is browsing search results also make it a very high impact point for company goals. As a UX designer I navigated helping the internal stakeholders prioritize information that should go on the cards, and also understand why certain things should be left off of the cards. These conversations required me to pull from my knowledge of UX best practices, design principles, and software development best practices. The end result was cleaner, easier to read, and maintains a balance between business initiatives and optimized user experience.
+  ##### Filtering
+
+  Due to the expanded product data — [provided by an earlier project I had done](/work/product-information-redesign) — there was a much greater number of attributes available to filter by. Besides the additional data was also taking into consideration the best way for the user to interact with that type of data — checkbox, range slider, text input, etc. The nature of the product being sold also lends itself well to filters that incorporate graphics to help the user more easily differentiate their options. I incorporated all of those decisions into how the filters ultimately looked, which included designing a custom icon set to be associated with a large number of the filter attributes.
+
+  ##### Result Cards
+
+  Result cards are complicated because the space is minimal, but the decision point is high impact — customers often make a judgement about whether to explore the product further when looking at the result card — so it can be an important place for key messaging. Getting the hierarchy of the elements — photo, title, price, etc — correct is important because the user needs enough information to make a decision, but not so much that they get overwhelmed.
+
+  Finding the balance of information to include on the cards was also not purely a design decision, it also included conversations with internal stakeholders about why certain elements should/should not be included in the cards. Ideally, this type of high impact design decisions are tested using multi-variate testing to gather from user behavior what is truly the best option.
 
 ### User Testing the Prototype
 
-  Another key feature of this redesign was running user tests on the rough prototype with [UserTesting.com](https://www.usertesting.com/). The tests focused on how easily users could find product and key product information as well as feedback on their impression of interacting with the site. Analyzing the results of these tests largely validated that the decisions we had made were in the correct direction to move the site experience forward for our customers.
+  Another key feature of this redesign was running remote user tests on the rough prototype with [UserTesting.com](https://www.usertesting.com/). The tests focused on how easily users could find product and key product information as well as feedback on their impression of interacting with the site. Analyzing the results of these tests largely validated that the decisions we had made were in the correct direction to move the site experience forward for our customers.
 
 
-## A Challenge and What I learned
+## What I Learned
 
-  A major challenge when it comes to creating design systems is forming base components that are flexible enough to scale well across use cases while also maintaining style and form that keeps the components on brand. Ideally design systems enable rapid iteration and prototyping of new experiences because the majority of design decisions have been baked into the system — thus providing a continuity of experience when many people are building an interface. 
+  This project used [Storybook](https://storybook.js.org/) as a place for the initial UI development that happened in conjunction with the design process. The resulting shorter feedback loop made refining the design system significantly easier. It also allowed the design team to be better integrated with the Agile sprints the development team was doing.
 
-  On this project, I got a deep dive into [Storybook](https://storybook.js.org/) and how it can be a dynamic testing ground for vetting design decisions as they are being made. This project utilized Storybook as a place for initial UI development to happen in conjunction with the design process. This shortens the feedback loop on potential issues with the design and allows the entire team to work together to solve for those problems earlier in the process.
-
-  The way we utilized Storybook on this project also opened my eyes to a better method of integrating the design team into Agile sprints. This is a process change I have found incredibly valuable — both on this project — and on many projects since. In my experience, the closer the design/product teams can work with the development teams the better the outcome for the teams and for the software produced. Storybook has the ability to be a collaboration playground that provides huge value to the team and product. It gives designers and developers a place to collaborate openly about what is and is not working in the design system elements while also seeing how the base level elements combine into composite components.
-
-  Storybook implementations take time and resources, but due to the outcomes it can provide, I have pushed for it whenever creating a design system since working on this project.
+  Closely integrating the design and development teams produced better outcomes faster on this project, and has continued to do so on projects I have worked on since. As someone whose skills span both design and development, I always find ways to bring the teams closer together on any project I work on.
 
 export default ({children}) => <Project>{children}</Project>
