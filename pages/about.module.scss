@@ -1,2 +1,29 @@
 @use '../styles/' as *;
 
+.content {
+  @include content;
+  display: grid;
+
+  @include desktop-m {
+    grid-template-columns: 1fr grid-8pt(40);
+    gap: $space-xl;
+  }
+}
+
+.about {
+  
+}
+
+.aboutImg {
+  width: grid-8pt(16);
+  border-radius: $radius-round;
+  overflow: hidden;
+  justify-self: center;
+  margin-top: $space-xl;
+
+  @include desktop-m {
+    border-radius: 0;
+    width: grid-8pt(40);
+    margin-top: $space-xxl;
+  }
+}
