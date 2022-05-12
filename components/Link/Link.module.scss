@@ -2,9 +2,9 @@
 @use '../../styles/' as *;
 
 .link {
-  color: $text;
+  color: $text-primary;
   text-decoration: none;
-  padding-bottom: $space-xxs;
+  border-bottom: px-rem(1px) solid $text-primary;
 }
 
 .nav_link {

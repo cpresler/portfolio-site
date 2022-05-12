@@ -11,38 +11,33 @@
 # Enterprise Web and iOS App
 
 <Label>Primary Goal</Label>
-<Text>Create an expense management platform that integrated with existing data sources and custom workflows, and build components that are reusable internally.</Text>
+<Text>Create an expense management platform that integrated with existing data sources and custom workflows.</Text>
 
-## Process
+## My Process
 
 ### User Flows, Data Model Creation, and Technical Vetting
 
-  I joined this particular project after the discovery phase where project requirements were scoped as well as details about required data were established. However, this project made use of an Agile/Scrum workflow so there was still plenty of work to be done in establishing user patterns and finalizing the data models needed for the application during subsequent sprints.
+  Despite joining this project after the initial discovery phase, I collaborated closely with the client's UX Designer to create user flows for app features during our sprints. We also collaborated on his designs so that I could vet them for technical feasibility and whether changes would require adjustments to the core data being produced by the the API.
 
-  ** NOTE: see if i can find a sample user flow **
-
-  I collaborated closely with the client's UX Designer to create user flows to establish the processes the app would need to encompass. For example, making sure that the expense submission form captured all of the correct data points, validated that data upon entry, and then sent the expense to the correct status/user upon submission. Establishing a basic data model for the core features of an application has become a basic best practice I try to follow on every project I work on. On a multi-disciplinary team agreeing on a data model allows the different team members to work asynchronously. I can establish dummy data and start laying out the interface, the Front End Developer can start create data stores and setup any state required, and the Back End Developer can build out an API that produces the established format.
-
-  A big part of my role on this project, besides building the actual user interface and design system was technically vetting the designs the client's UX Designer was creating. Working with the designer to vet his designs earlier in his process saved everyone time and energy, so that his finished product was easier to build while maintaining the desired outcome for the users. I had regular positive feedback from him because I speak the language of design and could empathize with his goals and objectives in the project and could brainstorm solutions that would be both technically viable and maintain the purpose of his vision for the feature.
+  My preferred workflow involves deciding on the shape of the data required being kicking off a new feature, so that the team can work on the interface, front end, and back end simultaneously — vetting designs up-front is a small thing, but it makes that workflow possible.
 
 ### Design System Creation
 
-  For this project, the design system and the core feature design took place simultaneously. Thankfully, when working in with component driven development patterns this is not a huge deal because the functional elements needed in the interfaces were established during wireframing just after discovery. As a result, I could build out the components needed for the application to function and establish some basic styles using global styling variables and mixins while my UX Design colleague was finalizing the designs. Once the designs were finalized, any necessary adjustments could be made and I could complete the feature much more quickly than if I had needed to start from scratch after receiving the final designs.
+  Incorporating the client's designer into our sprints meant that design system development and the core feature design took place simultaneously.
+  Thankfully, following component driven development patterns enabled us to work in tandem. I could build out the components needed for the feature and establish some basic styles using global styling variables and mixins while my UX Design colleague was making final adjustments. As long as we were communicating well. Receiving the final designs normally just required a few adjustments to finish the feature — allowing us to complete features more quickly than a completely separate design development process.
 
   #### Key Features of the Design System
 
-  **Global variables** - setting app globals for color, spacing, and text is important for maintainability and scalability.
-  **Mixins/Functions** - using built-in Sass functionality to create styling utilities that make it easier for either myself or a Front End Developer to update the styling
-  **Component Modules** - establishing core components that are utilized everywhere, e.g. Buttons, Links, Form Inputs, etc. Keeps the styling of that component in one primary location, and makes it easy to document variations in Storybook, or other tools.
+   - **Global variables** — setting app globals for color, spacing, and text is important for maintainability and scalability.
+   - **Mixins/Functions** — using built-in Sass functionality to create styling utilities that make it easier for either myself or a Front End Developer to update the styling while following the established patterns of the app.
+   - **Component Modules** — establishing core components that are utilized everywhere, e.g. Buttons, Links, Form Inputs, etc. Keeps the styling of that component in one primary location, and makes it easy to document variations in Storybook, or other tools.
 
   #### Converting the Design System for iOS
   
-  This project incorporated an iOS NativeScript application, and unfortunately due to NativeScript not fully supporting all CSS styling rules. I created a similar, yet customized version of the Web Application Design System for the iOS application. It followed the same basic principles: **Global Variables, Mixins/Functions, and Component Modules**. It simply paired down the styling functionality to match the scope of what was possible within NativeScript.
+  Alongside the web application we also built an iOS NativeScript application, and I created a custom design system for the app. Ideally the two applications would have shared a system, but because NativeScript does not support the same CSS styling rules as the browsers that was not an option. Instead I created a similar, yet customized version of the web application design system for the iOS application. I followed the same basic principles — Global Variables, Mixins/Functions, and Component Modules, but I modified the styles to utilize more of NativeScript's inherent styling and layout features. This approach lends the best parts of any styling system — reusability and modularity — to the application, while incorporating what NativeScript does best.
 
-## Outcome
+## What I Learned
 
-  Fully functioning, responsive web application that seamlessly transferred data back and forth to a iOS application that made use of the same user flows and functionality as the web application - slightly paired down based on user requirements for a more optimized mobile experience.
-
-
+  I learned both Angular and NativeScript working on these applications. I am passionate about learning new things, and while it is always a bit daunting to tackle a new project on technologies I am not completely familiar with, I also enjoy the challenge.
 
 export default ({children}) => <Project>{children}</Project>
