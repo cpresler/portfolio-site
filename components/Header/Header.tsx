@@ -29,7 +29,7 @@ const Header = ({ className, dark = false }: Props) => {
 
         <ul className={styles.nav_links}>
           <li><NavLink href={'/work'} exact={true} className={linkStyles}>Work</NavLink></li>
-          <li><NavLink href={'/Christy-Presler-web-resume_2022.pdf'} className={linkStyles} target="_blank">Resume</NavLink></li>
+          <li><NavLink href={'/Christy-Presler-web-resume_2024.pdf'} className={linkStyles} target="_blank">Resume</NavLink></li>
           <li><NavLink href={'/about'} exact={true} className={linkStyles}>About</NavLink></li>
         </ul>
       </nav>

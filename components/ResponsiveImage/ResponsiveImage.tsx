@@ -8,10 +8,9 @@ interface Props {
   width: number
   alt: string
   src: string
-  priority?: boolean
 }
 
-const ResponsiveImage = ({ className, height, width, alt, src, priority = false }: Props) => {
+const ResponsiveImage = ({ className, height, width, alt, src }: Props) => {
   const classes = classNames(className, {
     [styles.img]: true
   })
@@ -24,7 +23,6 @@ const ResponsiveImage = ({ className, height, width, alt, src, priority = false 
       src={`/${src}`}
       layout='responsive'
       className={classes}
-      priority={priority}
     />
   )
 }
