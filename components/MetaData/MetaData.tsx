@@ -14,7 +14,7 @@ const MetaData = ({
     <Head>
       <title>{ title }</title>
       <meta name='description' content={ description } />
-      {/* TODO: replace favicon */}
+      <meta property='og:image' content='https://christypresler.com/cp-portfolio-ogimage.png' />
       <link rel='icon' href='/favicon.ico' />
     </Head>
   )
