@@ -1,0 +1,44 @@
+---
+  title: 'Aligning Design and Development at PUMA'
+  desc: 'Maximizing Figma and React parity to align design and engineering'
+  thumbnail: 'images/projects/puma-design-system-components/puma-ds-components-thumb.png'
+  tags: ['Design Systems', 'Figma', 'UX', 'JavaScript',]
+  projectDate: '2023-05-01'
+  published: true
+---
+
+# Aligning Design and Development in PUMA's Design System
+
+<Label>Primary Goal</Label>
+<Text>Improve developer handoff and minimize design churn by maximizing parity between Design System components in Figma and their counterparts in React</Text>
+
+## My Process
+
+
+  As a Design Engineer I often have full visibility into both the design and engineering processes on projects. This viewpoint is particularly useful in design system work because of the key role that design systems play for both designers and engineers on large scale projects.
+  
+  I joined the PUMA design system team as the system was starting to achieve maturity, the foundations had been established and core components had mostly been built. As a system grows it becomes easier for small differences in naming conventions and approaches to component structure — often caused by functional limitations between design and engineering tools — to become larger mis-alignments. The lack parity make it more difficult for designers and engineers to communicate and collaborate on features — ultimately limiting the value added by using the design system in the first place.
+
+### Diagnosing the issue
+
+  Despite the solid documentation on the system, the disparities in naming conventions and structure because obvious when I started digging into the design and developed components. It was also clear in talking with both designers and engineers that the differently named parameters and sub-component structures were causing regular miscommunication during handoff. Engineers used Figma to analyze designs, but when it didn't match the reality of the React components they were supposed to be building with — they were left to guess at the designers intention, and often either asked the designer to rework their design to match what was possible, or built out a custom solution — increasing the platform's technical debt.
+
+### Presenting the problem and solution to leadership
+
+  I raised the issue with key stakeholders — including testimonials from team members I had talked with highlighting the problems it was causing. Leadership recognized the severity of the problem, how it was hindering adoption of the design system, and approved a short pause on new features in order to audit all existing Figma components and bring them into parity with our React system. 
+  
+### Auditing, upgrading, and communicating changes
+
+  An audit and upgrade of nearly 100 Figma components was not small thing, but it proved invaluable to the handoff process. By building Figma components in a manner than sought to optimize their flexibility and reuse for designers I was able to mirror their structure and parameters to their engineered versions much more closely — subtly guiding designers into using components how they were built to be used in code.
+
+  A key part of this upgrade process was also communicating with the design teams using the system. Many of the upgrades to components were breaking changes compared to past versions of the system so collaborating with design users was key to successfully launching the updates.
+
+  Another advantage to opening the lines of communication with the design teams early in the process was that it gave them plenty of time to understand the goal behind the updates — less rework on design proposals and smoother developer handoff. Because they understood the reason behind the changes they were much more willing to help us with testing the update, and highlighting any potential problems so that we could handle any issues collaboratively. This approach meant that the rollout went smoothly and avoided the elevated emotions that can sometimes come from changes to daily process.
+
+## What I Learned
+
+  This project is one that I might never have tackled if I wasn't a Design Engineer. This type of maintenance upgrade is often a tough sell to leadership due to the time investment required, but my ability to look into and compare both the Figma and React components allowed me to largely handle the update without additional engineering support decreasing the overall cost to complete the project. It also highlighted for me the deep value of close collaboration between designers and engineers when it comes to building software. Few teams enable their designers and engineers to have a close enough working relationship that component design structure and code structure achieve the kind of parity that helps a design system provide maximum value. In my opinion the investment it takes to achieve this type of parity in design system components pays for itself quickly as the system is used at scale by design and engineering teams.
+
+  I go into more detail about why I find this way of working valuable and the key things needed to get started in [an article on Nearform's blog](https://commerce.nearform.com/blog/2024/power-of-mirrored-components).
+
+export default ({children}) => <Project>{children}</Project>

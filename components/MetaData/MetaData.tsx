@@ -7,8 +7,8 @@ interface Props {
 }
 
 const MetaData = ({
-  title = 'Christy Presler - Senior Design Technologist',
-  description = 'Senior Design Technologist/UX Engineer with an insatiable curiosity about human behavior and a deep understanding of technology. I am a designer who implements engineering best practices and an engineer who delivers impeccable user experiences.'
+  title = 'Christy Presler - Senior Design Engineer',
+  description = 'Senior Design Engineer with an insatiable curiosity about human behavior and a deep understanding of technology. I am a designer who implements engineering best practices and an engineer who delivers impeccable user experiences.'
 }: Props) => {
   return (
     <Head>

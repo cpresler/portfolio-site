@@ -10,7 +10,7 @@ import { Projects } from '../types/ObjectTypes'
 
 export async function getStaticProps() {
   // get projects
-  const projects = getProjects(4)
+  const projects = getProjects(5)
 
   return {
     props: {
