@@ -1,0 +1,60 @@
+---
+  title: "FigLog Evolution Tracking Widget"
+  desc: 'Making it easy to track design decisions within the Figma canvas'
+  thumbnail: 'images/projects/figlog/figlog.png'
+  tags: ['Figma', 'Figma Widget', 'Design Tools', 'Design Systems',]
+  projectDate: '2024-02-01'
+  published: true
+---
+
+# FigLog Evolution Tracking Widget
+
+<Label>Primary Goal</Label>
+<Text>Creating a simple way for designers to track design decisions within the Figma canvas</Text>
+
+## My Process
+
+### The Problem
+    The idea behind FigLog originated when my colleague Ryan Srofe and I were tasked with maintaining and expanding a client’s design system. Despite a thorough handoff process when joining the project, we realized a lot of the context that had informed the original design decisions had been lost. 
+
+### Creating an MVP
+
+    Sensitive to this missing context and familiar with version control history logs, we had the idea of creating a Figma component that we could use to log changes as we started making adjustments to mature the system. Using the component was helpful, but it was also very manual, which started us down the path of what it would take to make logging changes simpler. Ryan described the process in detail in [this blog post](https://nearform.com/digital-community/figma-widget-figlog/), but in short, trying to simplify the change logging process led to creating the minimum viable version of the FigLog widget.
+
+
+### Upgrading Features and Improving Functionality
+
+    As the widget started gaining users we gathered feedback on features they wanted to see and those became the basis for the Version 2 of Figlog. I took the lead on upgrading the widget for Version 2: optimizing the code for the existing core functionality and building requested features - automatic date stamping, log statuses, editable logs, and linking to additional content.
+
+  
+### Building Within the Confines of a Widget
+
+    Adding the needed features to a web or mobile application would be a relatively simple proposition, but a guiding design principle for FigLog was to make it feel as “native” to Figma as possible. Keeping the widget light weight and keeping its functionality on the Figma canvas meant creating a tool only with the Figma provided building blocks. Doing this required a lot of flexibility and creative problem solving.
+
+    <ResponsiveImage src={'images/projects/figlog/creating-a-log.png'} width={1595} height={380} alt='Screen shot of the log editing interface with automated date entry, add link button, and delete log button.' wrapper />
+
+#### For Example:
+
+    Thanks to Figma’s default rendering order, dynamically showing a dropdown menu causes the menu to render beneath the elements lower on the canvas. This issue nearly stopped log types from being implemented, until I decided to consider the issue from a different angle. Displaying the menu horizontally avoided the overlapping issue entirely.
+
+    <ResponsiveImage src={'images/projects/figlog/log-type-dropdown.png'} width={1270} height={195} alt='Screen shot of the active horizontal log type selector' wrapper />
+
+
+    The text input element for plugins and widgets do not allow for text formatting in the same way that text boxes within Figma do, so linking from within the log text was not an option. Instead, I pivoted to integrating the links via a form and listing them below the log as clickable pill buttons. This had the side benefit of allowing me to integrate regex to match the most common link sources with icons matching the source logo.
+
+    <ResponsiveImage src={'images/projects/figlog/log-with-link.png'} width={1600} height={373} alt='Screen shot of the active horizontal log type selector' wrapper />
+
+    Then there was the struggle of Figma not having a real concept of a “form” so all input elements had to be validated and strung together using JavaScript to get data into the correct format. 
+
+    <ResponsiveImage src={'images/projects/figlog/link-form.png'} width={1522} height={121} alt='Screen shot of the active horizontal log type selector' wrapper />
+
+    Complexities aside, we were able to deploy Version 2 of FigLog within a few months of the initial launch, and have continued to respond to user feedback in Versions 3, and 4. FigLog’s user base is expected to reach 10K before the end of 2025.
+
+## What I Learned
+
+    Working on FigLog was a fun paradigm shift in a couple of ways — first, this is a product where I am both product owner and a core user — something that granted me an unusual amount of design freedom. Secondly, building within Figma has been a fascinating exercise in solving problems with minimal tools. Web and native application tooling has come so far from their simple beginnings (I’m not complaining), but needing to solve a problem with a very limited set of tools pushed my problem solving limits in ways that standard projects sometimes don’t.
+
+    This project also tapped into some of my favorite things about the work I do — getting to build tools that make pieces of people’s lives better, and tackling difficult problems by thinking about the problem from as many different angles as possible — because sometimes we need to question the assumption that something has to be vertical and try making it horizontal instead.
+
+
+export default ({children}) => <Project>{children}</Project>
