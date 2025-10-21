@@ -3,13 +3,5 @@
 .grid {
   display: grid;
   gap: $space-l;
-  $min-row: grid-4pt(75);  // min 300px
-  grid-auto-rows: minmax(300px, auto);
-
-  @include tablet {
-    grid-template-columns: 1fr 1fr;
-  }
-  @include desktop-s {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
