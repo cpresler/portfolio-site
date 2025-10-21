@@ -8,7 +8,7 @@ interface Props {
   width: number
   alt: string
   src: string
-  wrapper: boolean
+  wrapper?: boolean
 }
 
 const ResponsiveImage = ({ className, height, width, alt, src, wrapper }: Props) => {
