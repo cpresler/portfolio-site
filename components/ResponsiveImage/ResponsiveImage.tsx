@@ -8,14 +8,13 @@ interface Props {
   width: number
   alt: string
   src: string
+  wrapper: boolean
 }
 
-const ResponsiveImage = ({ className, height, width, alt, src }: Props) => {
-  const classes = classNames(className, {
-    [styles.img]: true
-  })
+const ResponsiveImage = ({ className, height, width, alt, src, wrapper }: Props) => {
+  const classes = classNames(className, {});
 
-  return (
+  const ResImage = () => (
     <Image
       width={width}
       height={height}
@@ -24,7 +23,17 @@ const ResponsiveImage = ({ className, height, width, alt, src }: Props) => {
       layout='responsive'
       className={classes}
     />
-  )
+  );
+console.log(`image: ${src} has wrapper: ${wrapper}`);
+  if (wrapper) {
+    return (
+      <div className={styles.wrapper}>
+        <ResImage />
+      </div>
+    )
+  }
+
+  return <ResImage />;
 }
 
 export default ResponsiveImage
